@@ -173,10 +173,21 @@ color3.addEventListener("input", setGradient);
 // Question 3: Write a function that converts HEX to RGB. Then Make that function auto-dect the formats so 
 // that if you enter HEX color format it returns RGB and if you enter RGB color format it returns HEX.
 
+
 const array = [1,2,4,591,392,391,2,5,10,2,1,1,1,20,20];
 
-let object = Object.assign({}, array);
-
+const cleanRoom = (array) => {
+  const sortedArray = array.sort(function(a, b){return a - b});
+  console.log(sortedArray);
+  for (i=0; i<sortedArray.length; i++){
+    if (sortedArray[i] == sortedArray[i++]){
+      const array1 = sortedArray.splice(i,)
+      console.log(array1);
+      console.log(sortedArray);
+    }
+  };
+}
+cleanRoom(array)
 
 
 
