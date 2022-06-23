@@ -176,19 +176,37 @@ color3.addEventListener("input", setGradient);
 
 const array = [1,2,4,591,392,391,2,5,10,2,1,1,1,20,20];
 
-const cleanRoom = (array) => {
-  const sortedArray = array.sort(function(a, b){return a - b});
+const cleanRoom = (array = []) => {
+  let newArray = [];
+  let groupArray;	
+  let sortedArray = array.sort((a, b) => a - b);
   console.log(sortedArray);
-  for (i=0; i<sortedArray.length; i++){
-    if (sortedArray[i] == sortedArray[i++]){
-      const array1 = sortedArray.splice(i,)
-      console.log(array1);
-      console.log(sortedArray);
+  for (let i=0; i<sortedArray.length; i++){
+    if (sortedArray[i-1] !== sortedArray[i]){
+      groupArray = [];
+      newArray.push(groupArray);
     }
+	  return newArray;
   };
 }
-cleanRoom(array)
+console.log(cleanRoom(array));
 
+
+// const arr = [5, 7, 5, 7, 8, 9, 1, 1];
+// const sortAndGroup = (arr = []) => {
+//    let result = [];
+//    let groupArray;
+//    arr.sort((a, b) => a - b);
+//    for (let i = 0; i < arr.length; i++) {
+//       if (arr[i − 1] !== arr[i]) {
+//          groupArray = [];
+//          result.push(groupArray);
+//       };
+//       groupArray.push(arr[i]);
+//    };
+//    return result;
+// };
+// console.log(sortAndGroup(arr));
 
 
 
