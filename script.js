@@ -185,10 +185,11 @@ const cleanRoom = (array = []) => {
     if (sortedArray[i-1] !== sortedArray[i]){
       groupArray = [];
       newArray.push(groupArray);
-    }
+    };
+	  groupArray.push(array[i]);
+     };
 	  return newArray;
   };
-}
 console.log(cleanRoom(array));
 
 
